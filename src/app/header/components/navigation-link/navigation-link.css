@@ -1,0 +1,19 @@
+.nav-link {
+  color: #fff;
+  padding: 0 1.5rem;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 4;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link.active {
+  color: #39c2d7;
+  background: #3c3b3d;
+  border-bottom: 0.01rem solid #fff;
+}
+
+.nav-link:hover {
+  background: #3c3b3d;
+}

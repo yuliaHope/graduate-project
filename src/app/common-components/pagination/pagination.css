@@ -1,0 +1,12 @@
+.pagination {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.pagination i {
+  cursor: pointer;
+}

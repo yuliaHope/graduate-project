@@ -1,0 +1,7 @@
+.ReactTable {
+  height: 87%;
+}
+
+.ReactTable .rt-tr-group {
+  flex: 0 0 auto;
+}

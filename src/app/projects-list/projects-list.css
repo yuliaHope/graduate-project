@@ -1,0 +1,9 @@
+.table {
+  width: 70%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  height: calc(100% - 4rem);
+}
