@@ -41,7 +41,9 @@ class ProjectInfoUI extends Component {
   }
 
   render() {
-    const { fpFiles, fpVAF, cocomo, expertStaff, expertExpences, result } = this.props;
+    const {
+      fpFiles, fpVAF, cocomo, expertStaff, expertExpences, result,
+    } = this.props;
     return (
       <ProjectInfoComponent
         fpFiles={fpFiles}
