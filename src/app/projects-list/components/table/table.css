@@ -1,7 +1,7 @@
-.ReactTable {
-  height: 87%;
+.ptojects-table {
+    height: 100%;
 }
 
 .ReactTable .rt-tr-group {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }

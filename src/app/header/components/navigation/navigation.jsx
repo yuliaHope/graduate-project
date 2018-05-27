@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { NavigationLink } from '../navigation-link';
 import './navigation.css';
 
-const Navigation = ({ items }) => <ul>{items.map(link => <NavigationLink {...link} key={link.href} />)}</ul>;
+const mapItems = items => items.map(link => <NavigationLink {...link} key={link.href} />);
+const Navigation = ({ items }) => <ul>{mapItems(items)}</ul>;
 
 Navigation.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),

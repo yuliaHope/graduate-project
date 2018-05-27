@@ -1,0 +1,13 @@
+.stepper {
+  position: relative;
+  height: calc(100% - 4rem);
+}
+
+.stepper-content {
+  height: calc(100% - 72px - 24px - 12px - 46px);
+  overflow-y: auto;
+}
+
+span.label {
+  color: dimgray;
+}

@@ -4,8 +4,8 @@ import createHistory from 'history/createBrowserHistory';
 import thunk from 'redux-thunk';
 
 import { projectsReducer } from '../projects-list/reducer';
-
-console.log('projectsReducer', projectsReducer);
+import { newProjectReducer } from '../new-project/reducer';
+import { infoReducer } from '../project-info/reducer';
 
 export const history = createHistory();
 const router = routerMiddleware(history);
@@ -21,6 +21,8 @@ export const store = createStore(
   combineReducers({
     router: routerReducer,
     projects: projectsReducer,
+    newProject: newProjectReducer,
+    info: infoReducer,
   }),
   composeEnhancers(applyMiddleware(router, thunk)),
 );

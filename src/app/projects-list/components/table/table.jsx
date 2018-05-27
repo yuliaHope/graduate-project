@@ -3,26 +3,32 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import PropTypes from 'prop-types';
 
-// import { TotalUsersContainer } from './analytics-users.styled';
 import { gridColumns } from './constants';
-import Pagination from '../../../common-components/pagination';
 import './table.css';
 
-const ProjectsTable = ({ projects, loaded, className }) => (
+const ProjectsTable = ({
+  projects, loaded, className, selectRow,
+}) => (
   <div className={className}>
-    {/* <TotalUsersContainer>Total users count {totalUsersCount}</TotalUsersContainer> */}
     <ReactTable
-      className="-striped -highlight"
+      className="-striped -highlight ptojects-table"
       defaultPageSize={Number.MAX_SAFE_INTEGER}
       filterable
-      loading={!loaded}
+      loading={!projects.length && !loaded}
       data={projects}
       columns={gridColumns}
       minRows={0}
-      pageSize={projects.length}
-      showPagination={false}
+      pageSize={10}
+      getTdProps={(state, rowInfo) => ({
+          onClick: (e, handleOriginal) => {
+            selectRow(rowInfo);
+            if (handleOriginal) {
+              handleOriginal();
+            }
+          },
+        })}
+      showPagination
     />
-    <Pagination limit={10} offset={0} totalPage={1} />
   </div>
 );
 
@@ -30,12 +36,14 @@ ProjectsTable.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.object),
   loaded: PropTypes.bool,
   className: PropTypes.string,
+  selectRow: PropTypes.func,
 };
 
 ProjectsTable.defaultProps = {
   projects: [],
   loaded: false,
   className: '',
+  selectRow: () => {},
 };
 
 export default ProjectsTable;

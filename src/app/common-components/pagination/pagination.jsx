@@ -21,9 +21,9 @@ export default class Pagination extends Component {
 
   onChange = newPageNumber => event => {
     const { totalPage } = this.props;
-    if (newPageNumber === 0) {
-      newPageNumber = 1;
-    }
+    // if (newPageNumber === 0) {
+    //   newPageNumber = 1;
+    // }
     const isValidNumber = newPageNumber > 0 && newPageNumber <= totalPage;
     if (isValidNumber) {
       this.props.onChange(event, newPageNumber);

@@ -1,0 +1,28 @@
+.label {
+    margin: 1rem 0;
+    display: block;
+}
+
+.radio-group {
+    display: flex;
+}
+
+.input-labels {
+    padding-left: calc(10rem + 48px);
+}
+
+.input-labels span {
+    width: 85px;
+    display: inline-block;
+    text-align: center;
+}
+
+.fixed-width-labels {
+    width: 10rem;
+    display: inline-block;
+}
+
+.choose-language-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,11 +1,14 @@
+.filters ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .filters {
-    width: 30%;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 1rem;
+  width: 30%;
 }
 
 .filter-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

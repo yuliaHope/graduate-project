@@ -7,8 +7,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { store, history } from './store';
 import ProjectsList from './projects-list';
 import Header from './header';
-// import ProjectInfo from './project-info';
-// import NewProgect from './new-project';
+import ProjectInfo from './project-info/project-info.container';
+import NewProgect from './new-project/new-project';
 import Statistics from './statistics/statistics-component';
 import './App.css';
 
@@ -21,9 +21,9 @@ const App = () => (
           <Switch>
             <Redirect exact from="/" to="/projects" />
             <Route exact path="/projects" component={ProjectsList} />
-            {/* <Route exact path="/projects/:id" component={ProjectInfo} />
-          <Route path="/new" component={NewProgect} />
-           */}
+            <Route exact path="/projects/:id" component={ProjectInfo} />
+
+            <Route path="/new" component={NewProgect} />
             <Route path="/statistics" component={Statistics} />
             <Route path="*" render={() => <div>Page not found</div>} />
           </Switch>

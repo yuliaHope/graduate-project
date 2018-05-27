@@ -7,9 +7,10 @@ import './filters-panel.css';
 const filters = ['W1', 'W2', 'W3', 'W4', 'W5', 'PERS', 'RCPX', 'RUSE', 'PDIF', 'PREX', 'FCIL', 'SCED'];
 const styles = { width: 150 };
 
-export const FiltersPanel = () => {
-  return (
-    <ul className="filters">
+export const FiltersPanel = () => (
+  <div className="filters">
+    <div className="label">Filters:</div>
+    <ul>
       {filters.map(filter => (
         <li key={filter} className="filter-item">
           <span>{filter}</span>
@@ -23,5 +24,5 @@ export const FiltersPanel = () => {
         </li>
       ))}
     </ul>
-  );
-};
+  </div>
+);
